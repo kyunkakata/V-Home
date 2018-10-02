@@ -1,0 +1,44 @@
+<Dialog 
+    visible={this.state.dialogVisible} 
+    title="Custom Dialog"
+    onTouchOutside={() => this.setState({dialogVisible: false})} >
+    <View>
+        // your content here
+    </View>
+</Dialog>
+
+// with message
+<ConfirmDialog
+    title="Confirm Dialog"
+    message="Are you sure about that?"
+    visible={this.state.dialogVisible}
+    onTouchOutside={() => this.setState({dialogVisible: false})}
+    positiveButton={{
+        title: "YES",
+        onPress: () => alert("Yes touched!")
+    }}
+    negativeButton={{
+        title: "NO",
+        onPress: () => alert("No touched!") 
+    }}
+/>
+
+// with custom content
+<ConfirmDialog
+    title="Confirm Dialog"
+    visible={this.state.dialogVisible}
+    onTouchOutside={() => this.setState({dialogVisible: false})}
+    positiveButton={{
+        title: "OK",
+        onPress: () => alert("Ok touched!")
+    }} >
+    <View>
+        // your content here
+    </View>
+</ConfirmDialog>
+
+<ProgressDialog 
+    visible={this.state.progressVisible} 
+    title="Progress Dialog" 
+    message="Please, wait..."
+/>
