@@ -15,7 +15,7 @@ class CustomHeader extends Component {
                 <Body>
                     <Title>{this.props.title}</Title>
                 </Body>
-                <Right />
+                <Right ><Icon name="ios-menu" onPress={() => this.props.drawerOpen()} /></Right>
             </Header>
         );
     }
