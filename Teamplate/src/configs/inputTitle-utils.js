@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, TouchableOpacity, TextInput, Platform } from 'react-native';
+import { View, Image, TouchableOpacity, Text, Platform } from 'react-native';
 import { Input } from 'native-base';
 
 // configs
@@ -19,8 +19,10 @@ export const headerIcon = (icon, onClick) => {
 /**
  * @param {*} title 
  */
-export const inputText = (title, placeholder) => {
-    return <TextInput placeholder={placeholder} underlineColorAndroid="transparent">
+export const headerTitle = (title) => {
+    return <Text numberOfLines={1} ellipsizeMode='tail'
+        style={[AppStyles.fontTitle, AppStyles.fontColorWhite, AppStyles.paddingContent,
+        { textAlign: Platform.OS === 'android' ? 'left' : 'center' }]}>
         {title}
-    </TextInput>
+    </Text>
 }; 

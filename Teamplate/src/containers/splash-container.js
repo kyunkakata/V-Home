@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { View, Image, Text, StyleSheet, TouchableOpacity, TouchableHighlight } from 'react-native';
+import { View, Image, Text, StyleSheet, TouchableOpacity, TouchableHighlight, TextInput } from 'react-native';
 import { connect } from 'react-redux';
 import ExtContainer from '../components/containers/base-container/ext-container';
 import { ACTION_DANG_VIEC, ACTION_TIM_VIEC } from '../actions/action-type';
-
+import ExtInputText from '../components/inputText/inputText';
 // configs
 import { AppStyles, Resources, Consts, Colors, Dimens, HeaderUtils } from '../configs/app-config';
 
@@ -27,6 +27,7 @@ class SplashContainer extends Component {
     render() {
         return (
             <ExtContainer >
+
                 <View style={style.container}>
                     <View>
                         <Image style={style.icon}
@@ -46,6 +47,7 @@ class SplashContainer extends Component {
                             <Text style={style.text}>Tim Viec</Text>
                         </TouchableHighlight>
                     </View>
+                    <ExtInputText ></ExtInputText>
                 </View>
                 <View style={style.footer}>
                     <Text >V-home V1.0</Text>
@@ -90,6 +92,7 @@ const style = StyleSheet.create({
         justifyContent: 'center'
     }
 });
+
 
 const mapStateToProps = state => {
     return {

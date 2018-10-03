@@ -14,13 +14,14 @@ import { Container, Content, Icon, Header, Body, Label } from 'native-base'
 import { DrawerNavigator, StackNavigator, DrawerItems, SafeAreaView } from 'react-navigation'
 
 //custom files 
-import MessageContainer from '../containers/message-container'
-import HistoryContainer from "../containers/history-container";
-import PointContainer from "../containers/point-container";
-import PolicyContainer from "../containers/policy-container";
-import HotlineContainer from "../containers/hotline-container";
-import LanguageContainer from "../containers/language-container";
-import IntroduceContainer from "../containers/introduce-container";
+import MessageContainer from './message-container'
+import HistoryContainer from './history-container';
+import PointContainer from './point-container';
+import PolicyContainer from './policy-container';
+import HotlineContainer from './hotline-container';
+import LanguageContainer from './language-container';
+import IntroduceContainer from './introduce-container';
+import MapContainer from './map-container';
 
 
 export default class App extends Component {
@@ -55,6 +56,9 @@ const CustomDrawerContentComponent = (props) => (
 const MyApp = DrawerNavigator({
 
     // For each screen that you can navigate to, create a new entry like this:
+    Map: {
+        screen: MapContainer,
+    },
     Message: {
         screen: MessageContainer,
     },
