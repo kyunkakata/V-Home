@@ -240,7 +240,8 @@ const styles = EStyleSheet.create({
     // $outline: 1,
     container: {
         width: '100%',
-        flex: 1
+        flex: 1,
+        backgroundColor: 'white'
     },
     modal: {
         width: '100%'

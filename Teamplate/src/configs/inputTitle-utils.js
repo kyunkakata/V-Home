@@ -1,14 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Image, TextInput } from 'react-native';
-import { AppStyles, Resources, Consts, Colors, Dimens, HeaderUtils, InputTextUtils } from '../configs/app-config';
-
-
 /**
  * @param {*} icon
  * @param {*} onPress
  */
 export const inputText_Icon = (icon, onPress) => {
-    return <Image source={Resources.ic_back_white} onPress={onPress} >
+    return <Image source={icon} onPress={onPress} >
     </Image >
 };
 
