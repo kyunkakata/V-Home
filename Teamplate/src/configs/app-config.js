@@ -11,8 +11,9 @@ import * as Utils from './utils';
 import * as HeaderUtils from './header-utils';
 import * as FlatListUtils from './flat-list-utils';
 import * as Resources from '../resources';
+import * as InputTextUtils from './inputTitle-utils';
 
 export {
     ActionTypes, AppStyles, I18n, AsyncStorage, Colors, Consts, Dimens, Utils, HeaderUtils,
-    FlatListUtils, Resources
+    FlatListUtils, Resources, InputTextUtils
 }

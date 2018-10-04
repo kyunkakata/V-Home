@@ -1,33 +1,31 @@
 import React, { Component } from 'react';
 
-import { StyleSheet, View } from 'react-native';
-import PropTypes from 'prop-types';
+import { StyleSheet, View, Image, TextInput } from 'react-native';
+import { Resources } from '../../configs/app-config';
 
-export default class ExtInputText extends Component {
+
+export default class ExtInputTextTest extends Component {
 
     render() {
         return (
             <View style={styles.container}>
+
                 <View style={styles.SectionStyle}>
-                    <View style={styles.ImageStyle} >{this.props.imageLeft}</View>
-                    <View style={{ flex: 1 }} >{this.props.inputText}</View>
-                    <View style={styles.ImageStyle} >{this.props.imageRight}</View>
+
+                    <Image source={Resources.ic_back_black} style={styles.ImageStyle} />
+
+                    <TextInput
+                        style={{ flex: 1 }}
+                        placeholder="Enter Your Email Here"
+                        underlineColorAndroid="transparent"
+                    />
+                    <Image source={Resources.ic_back_black} style={styles.ImageStyle} />
+
                 </View>
+
             </View>
         );
     }
-}
-
-ExtInputText.propTypes = {
-    imageLeft: PropTypes.any,
-    inputText: PropTypes.any,
-    imageRight: PropTypes.any
-}
-
-ExtInputText.defaultProps = {
-    imageLeft: null,
-    inputText: null,
-    imageRight: null
 }
 
 const styles = StyleSheet.create({

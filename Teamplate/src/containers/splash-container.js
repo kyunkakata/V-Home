@@ -3,10 +3,9 @@ import { View, Image, Text, StyleSheet, TouchableOpacity, TouchableHighlight, Te
 import { connect } from 'react-redux';
 import ExtContainer from '../components/containers/base-container/ext-container';
 import { ACTION_DANG_VIEC, ACTION_TIM_VIEC } from '../actions/action-type';
-import ExtInputText from '../components/inputText/inputText';
 // configs
-import { AppStyles, Resources, Consts, Colors, Dimens, HeaderUtils } from '../configs/app-config';
-
+import { AppStyles, Resources, Consts, Colors, Dimens, HeaderUtils, InputTextUtils } from '../configs/app-config';
+import ExtInputTextTest from '../components/inputText/inputTextTest';
 class SplashContainer extends Component {
     constructor(props) {
         super(props);
@@ -37,17 +36,14 @@ class SplashContainer extends Component {
                     </View>
                     <View style={style.lineRow}
                     />
-                    <View >
-                        <View style={style.lineColumn} />
-                        <TouchableHighlight style={style.textBorder} onPress={this.onpressDangViec} >
-                            <Text style={style.text}>Dang Viec</Text>
-                        </TouchableHighlight>
-                        <View style={style.lineColumn} />
-                        <TouchableHighlight style={style.textBorder} onPress={this.onpressTimViec}>
-                            <Text style={style.text}>Tim Viec</Text>
-                        </TouchableHighlight>
-                    </View>
-                    <ExtInputText ></ExtInputText>
+                    <View style={style.lineColumn} />
+                    <TouchableHighlight style={style.textBorder} onPress={this.onpressDangViec} >
+                        <Text style={style.text}>Dang Viec</Text>
+                    </TouchableHighlight>
+                    <View style={style.lineColumn} />
+                    <TouchableHighlight style={style.textBorder} onPress={this.onpressTimViec}>
+                        <Text style={style.text}>Tim Viec</Text>
+                    </TouchableHighlight>
                 </View>
                 <View style={style.footer}>
                     <Text >V-home V1.0</Text>
@@ -69,8 +65,11 @@ const style = StyleSheet.create({
         alignItems: 'center'
     },
     textBorder: {
+        width: '30%',
+        borderRadius: 20,
         padding: 5,
         borderWidth: 1,
+        alignItems: 'center'
     },
     text: {
         fontWeight: 'bold',
@@ -80,11 +79,13 @@ const style = StyleSheet.create({
     lineRow: {
         borderBottomColor: 'black',
         borderBottomWidth: 1,
-        width: '50%'
+        width: '80%'
     },
     lineColumn: {
-        borderColor: 'black',
-        height: '8%'
+        color: 'black',
+        borderWidth: 0.5,
+        width: '0.05%',
+        height: '5%'
     },
     footer: {
         width: '100%',
@@ -92,6 +93,8 @@ const style = StyleSheet.create({
         justifyContent: 'center'
     }
 });
+
+
 
 
 const mapStateToProps = state => {

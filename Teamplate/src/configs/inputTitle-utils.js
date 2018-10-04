@@ -1,28 +1,24 @@
 import React, { Component } from 'react';
-import { View, Image, TouchableOpacity, Text, Platform } from 'react-native';
-import { Input } from 'native-base';
+import { Image, TextInput } from 'react-native';
+import { AppStyles, Resources, Consts, Colors, Dimens, HeaderUtils, InputTextUtils } from '../configs/app-config';
 
-// configs
-import AppStyles from './app-styles';
-import * as Dimens from './dimens';
 
 /**
  * @param {*} icon
- * @param {*} onClick
+ * @param {*} onPress
  */
-export const headerIcon = (icon, onClick) => {
-    return <TouchableOpacity activeOpacity={Dimens.OPACITY} onPress={onClick} style={[AppStyles.paddingContent]}>
-        <Image source={icon} style={AppStyles.iconAction} resizeMode='contain' />
-    </TouchableOpacity>
+export const inputText_Icon = (icon, onPress) => {
+    return <Image source={Resources.ic_back_white} onPress={onPress} >
+    </Image >
 };
 
 /**
  * @param {*} title 
+ * @param {*} placeholder
+ * @param {*} underlineColorAndroid
  */
-export const headerTitle = (title) => {
-    return <Text numberOfLines={1} ellipsizeMode='tail'
-        style={[AppStyles.fontTitle, AppStyles.fontColorWhite, AppStyles.paddingContent,
-        { textAlign: Platform.OS === 'android' ? 'left' : 'center' }]}>
+export const inputText_Text = (title, placeholder, underlineColorAndroid) => {
+    return <TextInput placeholder={placeholder} underlineColorAndroid={underlineColorAndroid} >
         {title}
-    </Text>
+    </TextInput >
 }; 
